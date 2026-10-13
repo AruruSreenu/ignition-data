@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "treds.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T05:51:27Z"
+    },
+    "size": 1826,
+    "lastModificationSignature": "60f4b8b9ce7f40442fa4fa5b8992844cd37916d649b8a234e8d72ffa3491aeae",
+    "height": 64
+  }
+}

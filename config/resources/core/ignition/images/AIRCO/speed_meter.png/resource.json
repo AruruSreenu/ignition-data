@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "speed_meter.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T05:51:27Z"
+    },
+    "size": 2558,
+    "lastModificationSignature": "8c33f4f7be329b561355c5995486f092743632ae24025466d09a54e8e7a6d376",
+    "height": 64
+  }
+}

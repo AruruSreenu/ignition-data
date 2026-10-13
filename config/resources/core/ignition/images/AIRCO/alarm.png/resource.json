@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "alarm.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-07-24T11:12:53Z"
+    },
+    "size": 1751,
+    "lastModificationSignature": "6983efcf6f5505160c145ff90105380629d486c39fdb52ab2667c4038d810f83",
+    "height": 64
+  }
+}

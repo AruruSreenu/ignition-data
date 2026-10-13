@@ -1,0 +1,10 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900]51.00",
+    "dataType": "Float4",
+    "name": "51_00",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

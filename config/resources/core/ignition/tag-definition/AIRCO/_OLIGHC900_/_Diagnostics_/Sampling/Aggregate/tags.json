@@ -1,0 +1,26 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/IdealThroughput",
+    "dataType": "Float8",
+    "name": "IdealThroughput",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/RequestCount",
+    "dataType": "Int8",
+    "name": "RequestCount",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ActualThroughput",
+    "dataType": "Float8",
+    "name": "ActualThroughput",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

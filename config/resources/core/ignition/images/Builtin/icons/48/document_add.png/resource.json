@@ -1,0 +1,20 @@
+{
+  "scope": "A",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "document_add.png"
+  ],
+  "attributes": {
+    "width": 48,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "import",
+      "timestamp": "2026-04-28T06:28:17Z"
+    },
+    "size": 682,
+    "lastModificationSignature": "66865f1fc4022ca28e5e521d92e2873d4184792990dc58066d717bb284d6ef2a",
+    "height": 48
+  }
+}

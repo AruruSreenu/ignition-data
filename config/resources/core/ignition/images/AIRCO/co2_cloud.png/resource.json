@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "co2_cloud.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T05:51:27Z"
+    },
+    "size": 2943,
+    "lastModificationSignature": "5df9841a33320660dc4a2c9dcd9ddee8a04eaa582f1b38b4d0e4f753a229e09f",
+    "height": 64
+  }
+}

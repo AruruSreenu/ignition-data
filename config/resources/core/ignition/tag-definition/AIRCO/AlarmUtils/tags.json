@@ -1,0 +1,15 @@
+[
+  {
+    "defaultValue": 0,
+    "name": "ActiveAlarmCount",
+    "tagType": "AtomicTag",
+    "valueSource": "memory"
+  },
+  {
+    "dataType": "DataSet",
+    "defaultValue": "{\"columns\":[{\"name\":\"EventTime\",\"type\":\"java.util.Date\"},{\"name\":\"DisplayPath\",\"type\":\"java.lang.String\"},{\"name\":\"Priority\",\"type\":\"java.lang.String\"},{\"name\":\"State\",\"type\":\"java.lang.String\"}],\"rows\":[[1788346976911,\"FI6001_PV\",\"Low\",\"Cleared, Unacknowledged\"],[1788346961882,\"FI6001_PV\",\"Low\",\"Cleared, Unacknowledged\"],[1788346950363,\"FI6001_PV\",\"Low\",\"Cleared, Unacknowledged\"]]}",
+    "name": "Top3ActiveAlarms",
+    "tagType": "AtomicTag",
+    "valueSource": "memory"
+  }
+]

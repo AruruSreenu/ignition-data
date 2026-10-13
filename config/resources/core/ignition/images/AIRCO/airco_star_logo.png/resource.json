@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "airco_star_logo.png"
+  ],
+  "attributes": {
+    "width": 160,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-04-28T10:22:51Z"
+    },
+    "size": 10533,
+    "lastModificationSignature": "37784ebb9ab984acba52476b06e7dd74adab23037b2fbbde998a7ca85ff19bcc",
+    "height": 144
+  }
+}

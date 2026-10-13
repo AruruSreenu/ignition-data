@@ -1,0 +1,52 @@
+{
+  "pages": {},
+  "sharedDocks": {
+    "cornerPriority": "top-bottom",
+    "left": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "Menu",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 200,
+        "viewParams": {},
+        "viewPath": "Exchange/Hwa Jawi/Nev/MenuBar"
+      }
+    ],
+    "top": [
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "1306_ESMS",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 80,
+        "viewParams": {},
+        "viewPath": "Exchange/Hwa Jawi/Framework/MainTop"
+      },
+      {
+        "anchor": "fixed",
+        "autoBreakpoint": 480,
+        "content": "push",
+        "handle": "hide",
+        "iconUrl": "",
+        "id": "1324_ESMS",
+        "modal": false,
+        "resizable": false,
+        "show": "visible",
+        "size": 80,
+        "viewParams": {},
+        "viewPath": ""
+      }
+    ]
+  }
+}

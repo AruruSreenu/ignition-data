@@ -1,0 +1,40 @@
+{
+  "scope": "DG",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "query.sql"
+  ],
+  "attributes": {
+    "useMaxReturnSize": false,
+    "autoBatchEnabled": false,
+    "fallbackValue": "",
+    "maxReturnSize": 100,
+    "cacheUnit": "SEC",
+    "type": "Query",
+    "enabled": true,
+    "cacheAmount": 1,
+    "cacheEnabled": false,
+    "database": "IndustrialAutomation",
+    "fallbackEnabled": false,
+    "lastModificationSignature": "64562d0f031f438e9aa1d1802627b52dcd978a9d40861ef9c85cdf4596a31d4f",
+    "permissions": [
+      {
+        "zone": "",
+        "role": ""
+      }
+    ],
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-09-30T09:31:12Z"
+    },
+    "parameters": [
+      {
+        "type": "Parameter",
+        "identifier": "machineId",
+        "sqlType": 2
+      }
+    ]
+  }
+}

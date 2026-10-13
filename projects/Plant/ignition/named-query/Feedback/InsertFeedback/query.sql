@@ -1,0 +1,20 @@
+INSERT INTO SoftwareFeedback
+(
+    Title,
+    Description,
+    FeedbackType,
+    Priority,
+    Status,
+    ModuleName,
+    CreatedBy
+)
+VALUES
+(
+    :Title,
+    :Description,
+    :FeedbackType,
+    :Priority,
+    :Status,
+    :ModuleName,
+    :CreatedBy
+);

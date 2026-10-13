@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "down_trend.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T06:11:14Z"
+    },
+    "size": 1733,
+    "lastModificationSignature": "8356bb07506f278e5f424b6b1ef42349b8a76358bc97c7615c0b2ffbb3053ceb",
+    "height": 64
+  }
+}

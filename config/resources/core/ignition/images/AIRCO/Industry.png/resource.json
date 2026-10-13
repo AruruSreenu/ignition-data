@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "Industry.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-11T05:53:31Z"
+    },
+    "size": 2197,
+    "lastModificationSignature": "e5ad671de43e7babd38a40ab2f64d76fdb1d3c4a52bed72958adb8c81327c260",
+    "height": 64
+  }
+}

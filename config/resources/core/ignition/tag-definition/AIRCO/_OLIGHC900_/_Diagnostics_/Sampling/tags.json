@@ -1,0 +1,10 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/MonitoredItemCount",
+    "dataType": "Int8",
+    "name": "MonitoredItemCount",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

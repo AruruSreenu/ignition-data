@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "user_logout.png"
+  ],
+  "attributes": {
+    "size": 1356,
+    "lastModificationSignature": "c2dd61b67a78d505876af78aff085bd164775130eb149cffee6c471c4a38bc7a",
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-09-11T09:19:57Z"
+    },
+    "height": 64
+  }
+}

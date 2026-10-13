@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "toggle_off.png"
+  ],
+  "attributes": {
+    "size": 1149,
+    "lastModificationSignature": "96a15de916ee8a21c5daa83ad1430d0658e70cec9b37d6caa87483dbe390078f",
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-07-14T07:52:38Z"
+    },
+    "height": 64
+  }
+}

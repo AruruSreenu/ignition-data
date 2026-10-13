@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "power_gray.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-11T06:02:20Z"
+    },
+    "size": 1253,
+    "lastModificationSignature": "2fbde23798688fd45b5d37dcace4156c6f6128a5456b590d4fc5bafd2b0841f3",
+    "height": 64
+  }
+}

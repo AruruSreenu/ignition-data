@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "production_line.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-11T06:02:20Z"
+    },
+    "size": 2489,
+    "lastModificationSignature": "2b38ed67f5a765cfddc8eb6486c1189542308fd2ab4c1ce8d295fefaa43df67f",
+    "height": 64
+  }
+}

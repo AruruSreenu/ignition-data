@@ -1,0 +1,5 @@
+.context.tmp
+.gateway.xml.bak
+.redundancy.xml.bak
+projects/.resources/
+config/resources/.resources/

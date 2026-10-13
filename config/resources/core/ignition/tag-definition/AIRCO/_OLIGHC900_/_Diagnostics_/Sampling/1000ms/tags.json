@@ -1,0 +1,58 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.QueueDuration",
+    "dataType": "Float8",
+    "name": "QueueDuration",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.IdealThroughput",
+    "dataType": "Float8",
+    "name": "IdealThroughput",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.RequestCount",
+    "dataType": "Int8",
+    "name": "RequestCount",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.ActualSamplingInterval",
+    "dataType": "Float8",
+    "name": "ActualSamplingInterval",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.IdealSamplingInterval",
+    "dataType": "Float8",
+    "name": "IdealSamplingInterval",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.ActualThroughput",
+    "dataType": "Float8",
+    "name": "ActualThroughput",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/@1000ms.OverloadFactor",
+    "dataType": "Float8",
+    "name": "OverloadFactor",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

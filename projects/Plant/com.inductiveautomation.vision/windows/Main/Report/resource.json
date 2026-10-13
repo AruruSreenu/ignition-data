@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "xml-format-version": 1,
+    "lastModificationSignature": "026db498b207f289d19d3fef561ee5beedccf4bb76c823704a7935ba7f488d09",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-09-30T11:42:41Z"
+    },
+    "parameter-names": "DateRangeNum,EndDate,StartDate"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "connectURL": "jdbc:sqlserver://localhost\\SQLEXPRESS01",
+  "connectionProps": "databaseName\u003dIndustrialAutomation",
+  "connectionResetParams": "",
+  "defaultTransactionLevel": "DEFAULT",
+  "driver": "Microsoft SQLServer",
+  "evictionRate": -1,
+  "evictionTests": 3,
+  "evictionTime": 1800000,
+  "failoverMode": "STANDARD",
+  "failoverProfile": "",
+  "includeSchemaInTableName": false,
+  "password": {
+    "data": {
+      "ciphertext": "O29oLnOtsg",
+      "encrypted_key": "7cJ4N3kYJFt6qv6t98WHnHBSpnEq6C5bYaEY0lIi89SOlhiPy-t9OA",
+      "iv": "QK3Yez3FtHZck7eH",
+      "protected": "eyJhbGciOiJBMjU2S1ciLCJlbmMiOiJBMjU2R0NNIiwiaWF0IjoxNzgyNzI2MDE0LCJ6aXAiOiJERUYifQ",
+      "tag": "2ydMqJVRNWIr7OHEsupp6w"
+    },
+    "type": "Embedded"
+  },
+  "poolInitSize": 0,
+  "poolMaxActive": 8,
+  "poolMaxIdle": 8,
+  "poolMaxWait": 5000,
+  "poolMinIdle": 0,
+  "slowQueryLogThreshold": 60000,
+  "testOnBorrow": true,
+  "testOnReturn": false,
+  "testWhileIdle": false,
+  "translator": "MSSQL",
+  "username": "sa",
+  "validationQuery": "SELECT 1",
+  "validationSleepTime": 10000
+}

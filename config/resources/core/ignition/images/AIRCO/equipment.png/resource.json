@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "equipment.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-11T06:02:20Z"
+    },
+    "size": 1145,
+    "lastModificationSignature": "7df8d5a764d5b186dd204f58cd0dd361bd9c2a7aac66a7270353834aff8b1f12",
+    "height": 64
+  }
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Name",
+    "dataType": "String",
+    "name": "Name",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/State",
+    "dataType": "String",
+    "name": "State",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Hostname",
+    "dataType": "String",
+    "name": "Hostname",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Status",
+    "dataType": "String",
+    "name": "Status",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Connected",
+    "dataType": "Boolean",
+    "name": "Connected",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Port",
+    "dataType": "Int4",
+    "name": "Port",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "user_switch.png"
+  ],
+  "attributes": {
+    "size": 1175,
+    "lastModificationSignature": "d87c040944881206f3f74db0269ba478d5f39484331c8e698a0cdd55829d0a06",
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-09-11T09:20:35Z"
+    },
+    "height": 64
+  }
+}

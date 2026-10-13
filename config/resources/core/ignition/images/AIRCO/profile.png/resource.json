@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "profile.png"
+  ],
+  "attributes": {
+    "size": 1802,
+    "lastModificationSignature": "af8d271eb4bcba9305a307af36be084c5f491d77c21115c412e4b8a6b1bb0aec",
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-09-10T04:48:25Z"
+    },
+    "height": 64
+  }
+}

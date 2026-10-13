@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "co2.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T06:11:14Z"
+    },
+    "size": 2808,
+    "lastModificationSignature": "a197f49aa6e2678bc378aeb8af6a0a3ba36af76a8cc3ecf5c66e86bbbb023d2e",
+    "height": 64
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "scope": "C",
+  "version": 2,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "window.bin",
+    "thumbnail.png"
+  ],
+  "attributes": {
+    "xml-format-version": 1,
+    "lastModificationSignature": "a1dd3b7624ecdd78c7ba42e4738d748ea49cfac9cf8770a2ff422d2b27cdad75",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-09-15T10:30:55Z"
+    },
+    "parameter-names": "BtnEnable,PlantSelected"
+  }
+}

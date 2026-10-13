@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "total_cost.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T06:11:14Z"
+    },
+    "size": 3722,
+    "lastModificationSignature": "aea5e6d9e44affe6db8a646e18c736abdaa7480412096fa5ef5de91c6ad24a6a",
+    "height": 64
+  }
+}

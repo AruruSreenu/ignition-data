@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "aico_logo.png"
+  ],
+  "attributes": {
+    "width": 154,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-04-28T10:22:51Z"
+    },
+    "size": 6756,
+    "lastModificationSignature": "6568b259ec54569043dd52e1320b9b64ff503d575344601125f57434687b1bca",
+    "height": 45
+  }
+}

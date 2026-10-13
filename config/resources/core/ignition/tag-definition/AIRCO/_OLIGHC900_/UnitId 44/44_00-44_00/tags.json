@@ -1,0 +1,12 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900]44.00",
+    "dataType": "Float4",
+    "historyProvider": "AIRCO",
+    "name": "44_00",
+    "historyEnabled": false,
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

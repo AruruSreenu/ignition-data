@@ -1,0 +1,381 @@
+[
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 29/29_00-29_00/29_00",
+    "name": "TI3014",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 4/4_00-4_00/4_00",
+    "name": "FI6001_T",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 5/5_00-5_00/5_00",
+    "name": "FI6001_SP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 17/17_00-17_00/17_00",
+    "name": "TI3110",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 16/16_00-16_00/16_00",
+    "name": "FI6005_SP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 41/41_00-41_00/41_00",
+    "name": "FI6002_T",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 33/33_00-33_00/33_00",
+    "name": "PI3101",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 50/50_00-50_00/50_00",
+    "name": "PI6003",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 53/53_00-53_00/53_00",
+    "name": "FI4004N_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 43/43_00-43_00/43_00",
+    "name": "FI6003_T",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 66/66_00-66_00/66_00",
+    "name": "TI3108",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 36/36_00-36_00/36_00",
+    "name": "FI6003_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 6/6_00-6_00/6_00",
+    "name": "FI6002_SP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "historyProvider": "AIRCO",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 47/47_00-47_00/47_00",
+    "alarms": [
+      {
+        "mode": "AboveValue",
+        "name": "OLIG_HC900_PCV6001",
+        "label": "",
+        "displayPath": "PCV6001_PV",
+        "setpointA": {
+          "bindType": "Tag",
+          "value": "[.]PCV6001_SP"
+        }
+      }
+    ],
+    "name": "PCV6001_PV",
+    "historyEnabled": true,
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 65/65_00-65_00/65_00",
+    "name": "TI3107",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 39/39_00-39_00/39_00",
+    "name": "FI1011_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "historyProvider": "AIRCO",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 44/44_00-44_00/44_00",
+    "name": "PI6004",
+    "historyEnabled": false,
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 7/7_00-7_00/7_00",
+    "name": "FI6003_SP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 63/63_00-63_00/63_00",
+    "name": "TI3105",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 14/14_00-14_00/14_00",
+    "name": "P604 SP2_SP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 18/18_00-18_00/18_00",
+    "name": "TI3001",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 64/64_00-64_00/64_00",
+    "name": "TI3106",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 8/8_00-8_00/8_00",
+    "name": "PCV6001_SP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 35/35_00-35_00/35_00",
+    "name": "FI6002_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 30/30_00-30_00/30_00",
+    "name": "TI3011",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 19/19_00-19_00/19_00",
+    "name": "TI3003",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 27/27_00-27_00/27_00",
+    "name": "TI3008",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 40/40_00-40_00/40_00",
+    "name": "FI5000",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 49/49_00-49_00/49_00",
+    "name": "PI6002",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 25/25_00-25_00/25_00",
+    "name": "TI3004",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 23/23_00-23_00/23_00",
+    "name": "TI3012",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 32/32_00-32_00/32_00",
+    "name": "PI3016",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 34/34_00-34_00/34_00",
+    "name": "FI4004_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 62/62_00-62_00/62_00",
+    "name": "TI3104",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 48/48_00-48_00/48_00",
+    "name": "PCV6001_OP",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 22/22_00-22_00/22_00",
+    "name": "TI3009",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 24/24_00-24_00/24_00",
+    "name": "TI3002",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 60/60_00-60_00/60_00",
+    "name": "TI3102",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 21/21_00-21_00/21_00",
+    "name": "TI3007",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 46/46_00-46_00/46_00",
+    "name": "PI6005",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 61/61_00-61_00/61_00",
+    "name": "TI3103",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 68/68_00-68_00/68_00",
+    "name": "FI6005_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 31/31_00-31_00/31_00",
+    "name": "TI3013",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 20/20_00-20_00/20_00",
+    "name": "TI3005",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 59/59_00-59_00/59_00",
+    "name": "TI3101",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 3/3_00-3_00/3_00",
+    "name": "PI6001",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "historyProvider": "AIRCO",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 1/1_00-1_00/1_00",
+    "alarms": [
+      {
+        "mode": "AboveValue",
+        "name": "OLIG_HC900_FI6001",
+        "displayPath": "FI6001_PV",
+        "setpointA": {
+          "bindType": "Tag",
+          "value": "[.]FI6001_SP"
+        }
+      }
+    ],
+    "name": "FI6001_PV",
+    "historyEnabled": true,
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 28/28_00-28_00/28_00",
+    "name": "TI3010",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 41/41_00-41_00/41_00",
+    "name": "FI5017_PV",
+    "tagType": "AtomicTag"
+  },
+  {
+    "valueSource": "reference",
+    "dataType": "Float4",
+    "sourceTagPath": "[~]_OLIGHC900_/UnitId 26/26_00-26_00/26_00",
+    "name": "TI3006",
+    "tagType": "AtomicTag"
+  }
+]

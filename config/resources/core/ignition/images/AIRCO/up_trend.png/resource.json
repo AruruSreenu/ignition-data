@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "up_trend.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T06:11:14Z"
+    },
+    "size": 1227,
+    "lastModificationSignature": "aaac4ea61b585698445139a2f7249f811904e2a9e48341b25eef054b37480898",
+    "height": 64
+  }
+}

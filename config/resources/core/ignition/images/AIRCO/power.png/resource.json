@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "power.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-06T11:04:23Z"
+    },
+    "size": 1878,
+    "lastModificationSignature": "b851588ed3e573a8afe54dc914cc09fb981ecd1f624fc0a980b4efe87f4d5e0a",
+    "height": 64
+  }
+}

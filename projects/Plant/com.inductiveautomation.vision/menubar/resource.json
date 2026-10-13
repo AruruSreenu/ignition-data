@@ -1,0 +1,53 @@
+{
+  "scope": "D",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [],
+  "attributes": {
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-21T04:48:23Z"
+    },
+    "menuRoot": {
+      "children": [
+        {
+          "children": [
+            {
+              "script": "system.security.logout()",
+              "name": "Logout",
+              "description": "",
+              "iconPath": "Builtin/icons/16/id_card_delete.png",
+              "mnemonic": "L"
+            },
+            {
+              "script": "system.security.lockScreen()",
+              "name": "Lock Screen",
+              "description": "",
+              "iconPath": "Builtin/icons/16/monitor_lock.png",
+              "mnemonic": "S"
+            },
+            {
+              "script": "system.util.exit()",
+              "name": "Exit",
+              "description": "",
+              "iconPath": "Builtin/icons/16/exit.png",
+              "mnemonic": "E"
+            }
+          ],
+          "script": "",
+          "name": "Command",
+          "description": "",
+          "iconPath": "",
+          "mnemonic": "C"
+        }
+      ],
+      "script": "",
+      "name": "Menu Item",
+      "description": "",
+      "iconPath": "",
+      "mnemonic": ""
+    },
+    "lastModificationSignature": "d06787822fda68d27b5c796c949df010073e82312ef69bae27d4b896633a55bb"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "settings.png"
+  ],
+  "attributes": {
+    "width": 24,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-07-14T05:49:38Z"
+    },
+    "size": 606,
+    "lastModificationSignature": "2082e45151cd45b7c998ddd2e7d6213a1ea8154a882d6add38e1e38407ae6278",
+    "height": 24
+  }
+}

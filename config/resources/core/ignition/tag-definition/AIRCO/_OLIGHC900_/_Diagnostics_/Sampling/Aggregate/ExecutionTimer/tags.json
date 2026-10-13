@@ -1,0 +1,90 @@
+[
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.FiveMinuteRate",
+    "dataType": "Float8",
+    "name": "FiveMinuteRate",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.99thPercentile",
+    "dataType": "Float8",
+    "name": "99thPercentile",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.75thPercentile",
+    "dataType": "Float8",
+    "name": "75thPercentile",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.Max",
+    "dataType": "Int8",
+    "name": "Max",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.OneMinuteRate",
+    "dataType": "Float8",
+    "name": "OneMinuteRate",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.95thPercentile",
+    "dataType": "Float8",
+    "name": "95thPercentile",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.MeanRate",
+    "dataType": "Float8",
+    "name": "MeanRate",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.Min",
+    "dataType": "Int8",
+    "name": "Min",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.Count",
+    "dataType": "Int8",
+    "name": "Count",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.98thPercentile",
+    "dataType": "Float8",
+    "name": "98thPercentile",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  },
+  {
+    "valueSource": "opc",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Sampling/Aggregate/ExecutionTimer.Mean",
+    "dataType": "Float8",
+    "name": "Mean",
+    "tagType": "AtomicTag",
+    "opcServer": "Ignition OPC UA Server"
+  }
+]

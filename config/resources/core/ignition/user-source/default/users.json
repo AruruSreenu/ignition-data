@@ -1,0 +1,59 @@
+{
+  "users": [
+    {
+      "uuid": "b3d5d56b-4d7f-4f61-9013-82eb1474c886",
+      "username": "admin",
+      "schedule": "Always",
+      "password": "[404b958b]2303581e5d49c182db4de82a8efd06e29535ef6779e25054350f7e4e9019404e",
+      "passwordDate": "20260428.115758753+0530",
+      "passwordHistory": [],
+      "createdDate": "20260428.115758751+0530",
+      "lastModifiedDate": "20260428.115758751+0530",
+      "roles": [
+        "dbad96f7-1b70-4dab-bc6c-b153884eda16"
+      ],
+      "extraProps": [],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    },
+    {
+      "uuid": "d1c363ee-dd6a-401e-83d5-82b9474d153f",
+      "username": "Anil",
+      "firstName": "",
+      "lastName": "",
+      "schedule": "Always",
+      "description": "",
+      "password": "[1E2AAF2B]53eaf172594db624bc9ed31f53206febbeaa9ed6bddceeca9ab8d8556021ed39",
+      "passwordDate": "20260915.155011164+0530",
+      "passwordHistory": [],
+      "badge": "",
+      "createdDate": "20260915.154535858+0530",
+      "lastModifiedDate": "20260915.155035067+0530",
+      "roles": [
+        "dbeb7e23-62f1-41c6-9b4f-2964eb28fc2a"
+      ],
+      "extraProps": [
+        {
+          "propertyKey": "user.pin",
+          "propertyValue": ""
+        }
+      ],
+      "scheduleAdjustments": [],
+      "contactInfos": []
+    }
+  ],
+  "roles": [
+    {
+      "uuid": "dbad96f7-1b70-4dab-bc6c-b153884eda16",
+      "rolename": "Administrator",
+      "createdDate": "20260428.115758751+0530",
+      "lastModifiedDate": "20260428.115758751+0530"
+    },
+    {
+      "uuid": "dbeb7e23-62f1-41c6-9b4f-2964eb28fc2a",
+      "rolename": "Operator",
+      "createdDate": "20260915.155026182+0530",
+      "lastModifiedDate": "20260915.155035009+0530"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "flash.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T05:51:27Z"
+    },
+    "size": 1201,
+    "lastModificationSignature": "ecc5a145b3309da8612548f1edf442a8174895e8a88bb953b7e35ed0a13ad524",
+    "height": 64
+  }
+}

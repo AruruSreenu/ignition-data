@@ -1,0 +1,21 @@
+{
+  "scope": "A",
+  "description": "",
+  "version": 1,
+  "restricted": false,
+  "overridable": true,
+  "files": [
+    "demand_energy.png"
+  ],
+  "attributes": {
+    "width": 64,
+    "format": "PNG",
+    "lastModification": {
+      "actor": "admin",
+      "timestamp": "2026-08-07T06:11:14Z"
+    },
+    "size": 2932,
+    "lastModificationSignature": "f4493414bb2d5077d833210a2a20d756e28b8005f4886c90c29d0c95c038ec63",
+    "height": 64
+  }
+}
