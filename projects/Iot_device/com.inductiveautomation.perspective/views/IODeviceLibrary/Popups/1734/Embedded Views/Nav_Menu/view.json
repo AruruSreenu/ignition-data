@@ -1,0 +1,210 @@
+{
+  "custom": {},
+  "params": {
+    "EditSelected": false,
+    "HelpSelect": false,
+    "HomeSelect": true
+  },
+  "propConfig": {
+    "params.EditSelected": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.HelpSelect": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.HomeSelect": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 350,
+      "width": 50
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.params.HomeSelect \u003d \"true\"\n\tself.view.params.HelpSelect \u003d \"false\"\n\tself.view.params.EditSelected \u003d \"false\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "icn_Home"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.HomeSelect"
+              },
+              "transforms": [
+                {
+                  "expression": "toBoolean({value})",
+                  "type": "expression"
+                },
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#e0e0e0"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "color": "#808080",
+          "path": "material/home"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.params.HomeSelect \u003d \"false\"\n\tself.view.params.HelpSelect \u003d \"false\"\n\tself.view.params.EditSelected \u003d \"true\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "icn_Edit"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.EditSelected"
+              },
+              "transforms": [
+                {
+                  "expression": "toBoolean({value})",
+                  "type": "expression"
+                },
+                {
+                  "fallback": null,
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#e0e0e0"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "color": "#808080",
+          "path": "material/edit"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "meta": {
+          "name": "lbl_Separator"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.params.HomeSelect \u003d \"false\"\n\tself.view.params.HelpSelect \u003d \"true\"\n\tself.view.params.EditSelected \u003d \"false\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "icn_Rev"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "propConfig": {
+          "props.style.backgroundColor": {
+            "binding": {
+              "config": {
+                "path": "view.params.HelpSelect"
+              },
+              "transforms": [
+                {
+                  "expression": "toBoolean({value})",
+                  "type": "expression"
+                },
+                {
+                  "fallback": "",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#e0e0e0"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "color": "#808080",
+          "path": "material/help"
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Popups/background",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

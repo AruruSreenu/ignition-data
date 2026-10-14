@@ -1,0 +1,183 @@
+{
+  "custom": {},
+  "params": {
+    "provider": ""
+  },
+  "propConfig": {
+    "params.provider": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1183,
+      "width": 550
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Header"
+        },
+        "position": {
+          "basis": "25px",
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "expression": "\u0027Devices on Provider - \u0027 + {view.params.provider}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "textStyle": {
+            "borderBottomStyle": "solid",
+            "borderBottomWidth": 2,
+            "fontWeight": "bold",
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "Equipment"
+            },
+            "position": {
+              "basis": "41%",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Equipment",
+              "textStyle": {
+                "fontWeight": "bold",
+                "paddingLeft": 5
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "IPAddress"
+            },
+            "position": {
+              "basis": "25%",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "style": {
+                "textAlign": "center"
+              },
+              "text": "IP Address",
+              "textStyle": {
+                "fontWeight": "bold"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "Connection"
+            },
+            "position": {
+              "basis": "34%",
+              "grow": 1,
+              "shrink": 0
+            },
+            "props": {
+              "text": "Connection",
+              "textStyle": {
+                "fontWeight": "bold",
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "ImagePlaceholder"
+            },
+            "position": {
+              "basis": "45px",
+              "display": false,
+              "shrink": 0
+            },
+            "props": {
+              "textStyle": {
+                "textAlign": "center"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "ColumnLabels"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "props": {
+          "justify": "space-evenly",
+          "style": {
+            "borderBottomStyle": "solid",
+            "borderBottomWidth": 2,
+            "overflow": "visible"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "DeviceListFlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.params.provider"
+              },
+              "transforms": [
+                {
+                  "code": "\n\tprovider \u003d str(value)\n\n\tif not provider:\n\t\treturn []\n\t\t\n\tdevicesPath \u003d \"[%s]Exchange/Gateway Device Connection Monitor/Devices\" % provider\n\n\tinstances \u003d []\n\n\ttry:\n\t\tfor item in system.tag.browse(devicesPath):\n\n\t\t\tif str(item[\"tagType\"]) \u003d\u003d \"Folder\":\n\n\t\t\t\tinstances.append({\n\t\t\t\t\t\"tagPath\": str(item[\"fullPath\"])\n\t\t\t\t})\n\n\texcept Exception as e:\n\t\tsystem.util.getLogger(\"exchange.gatewayDeviceMonitor.DeviceFlexRepeater\").error(\n\t\t\t\"Failed browsing %s: %s\" % (devicesPath, e)\n\t\t)\n\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "direction": "column",
+          "elementPosition": {
+            "basis": "auto"
+          },
+          "path": "Exchange/Gateway Device Connection Monitor/Device Connection Status",
+          "useDefaultViewWidth": false
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "wrap": "wrap"
+    },
+    "type": "ia.container.flex"
+  }
+}

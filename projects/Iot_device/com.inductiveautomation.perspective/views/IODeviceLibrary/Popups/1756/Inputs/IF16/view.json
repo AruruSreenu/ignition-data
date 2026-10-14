@@ -1,0 +1,2221 @@
+{
+  "custom": {
+    "InputDataType": false,
+    "pageNr": 0
+  },
+  "params": {
+    "Module_Tag": "[default]_types_/IODeviceLibrary/1756/Inputs/1756-IF16"
+  },
+  "propConfig": {
+    "custom.InputDataType": {
+      "binding": {
+        "config": {
+          "fallbackDelay": 2.5,
+          "mode": "indirect",
+          "references": {
+            "Module_Tag": "{view.params.Module_Tag}"
+          },
+          "tagPath": "{Module_Tag}/Parameters.InputDataType"
+        },
+        "transforms": [
+          {
+            "code": "\tif \u0027value\u0027 in str(value):\n\t\treturn False\n\telse:\n\t\treturn value",
+            "type": "script"
+          }
+        ],
+        "type": "tag"
+      },
+      "onChange": {
+        "enabled": null,
+        "script": "\t#Force to page 0 if inputData type is in differential\n\tif not currentValue.value:\n\t\tself.custom.pageNr \u003d 0"
+      },
+      "persistent": true
+    },
+    "custom.pageNr": {
+      "persistent": true
+    },
+    "params.Module_Tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 385,
+      "width": 600
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Nav_Menu"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "params": {
+            "ConfigEnable": true,
+            "ConfigSelect": "false",
+            "EditSelected": "false",
+            "HelpSelect": "false",
+            "HomeSelect": "true"
+          },
+          "path": "IODeviceLibrary/Popups/1756/Embedded Views/Nav_Menu"
+        },
+        "type": "ia.display.view"
+      },
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "lbl_Separator"
+                },
+                "position": {
+                  "basis": "25px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "lbl_Led"
+                },
+                "position": {
+                  "basis": "25px"
+                },
+                "propConfig": {
+                  "props.style.borderColor": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 0,
+                        "mode": "indirect",
+                        "references": {
+                          "Module_Tag": "{view.params.Module_Tag}"
+                        },
+                        "tagPath": "{Module_Tag}/I/Fault"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d-1",
+                          "type": "expression"
+                        },
+                        {
+                          "fallback": "#FF00FF",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": false,
+                              "output": "#1DC56F"
+                            },
+                            {
+                              "input": true,
+                              "output": "#F5E11B"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "borderStyle": "solid",
+                    "borderWidth": 5
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "lbl_Separator1"
+                },
+                "position": {
+                  "basis": "10px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "lbl_State"
+                },
+                "position": {
+                  "basis": "80px"
+                },
+                "propConfig": {
+                  "props.style.color": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 0,
+                        "mode": "indirect",
+                        "references": {
+                          "Module_Tag": "{view.params.Module_Tag}"
+                        },
+                        "tagPath": "{Module_Tag}/I/Fault"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d-1",
+                          "type": "expression"
+                        },
+                        {
+                          "fallback": "#000000",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": false,
+                              "output": "#000000"
+                            },
+                            {
+                              "input": true,
+                              "output": "#FFFFFF"
+                            }
+                          ],
+                          "outputType": "color",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  },
+                  "props.text": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 0,
+                        "mode": "indirect",
+                        "references": {
+                          "Module_Tag": "{view.params.Module_Tag}"
+                        },
+                        "tagPath": "{Module_Tag}/I/Fault"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d-1",
+                          "type": "expression"
+                        },
+                        {
+                          "fallback": "Not Ready",
+                          "inputType": "scalar",
+                          "mappings": [
+                            {
+                              "input": false,
+                              "output": "Ready"
+                            },
+                            {
+                              "input": true,
+                              "output": "Not Ready"
+                            }
+                          ],
+                          "outputType": "scalar",
+                          "type": "map"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "lbl_Separator2"
+                },
+                "position": {
+                  "basis": "25px"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "lbl_MdlFlt"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 0,
+                        "mode": "indirect",
+                        "references": {
+                          "Module_Tag": "{view.params.Module_Tag}"
+                        },
+                        "tagPath": "{Module_Tag}/I/Fault"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d-1",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#FFFFFF",
+                    "fontSize": 12
+                  },
+                  "text": "Module Fault Exist"
+                },
+                "type": "ia.display.label"
+              },
+              {
+                "meta": {
+                  "name": "lbl_CHFlt"
+                },
+                "position": {
+                  "basis": "50px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "fallbackDelay": 0,
+                        "mode": "indirect",
+                        "references": {
+                          "Module_Tag": "{view.params.Module_Tag}"
+                        },
+                        "tagPath": "{Module_Tag}/I/Fault"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}!\u003d-1 \u0026\u0026 {value}!\u003d0",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "style": {
+                    "color": "#3f3f3f",
+                    "fontSize": 12
+                  },
+                  "text": "Channel Fault Exist"
+                },
+                "type": "ia.display.label"
+              }
+            ],
+            "meta": {
+              "name": "Fct_Banner"
+            },
+            "position": {
+              "basis": "50px"
+            },
+            "propConfig": {
+              "props.style.backgroundColor": {
+                "binding": {
+                  "config": {
+                    "fallbackDelay": 0,
+                    "mode": "indirect",
+                    "references": {
+                      "Module_Tag": "{view.params.Module_Tag}"
+                    },
+                    "tagPath": "{Module_Tag}/I/Fault"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "{value}\u003d-1",
+                      "type": "expression"
+                    },
+                    {
+                      "fallback": "",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": true,
+                          "output": "#000000"
+                        }
+                      ],
+                      "outputType": "scalar",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "tag"
+                }
+              }
+            },
+            "props": {
+              "alignItems": "center",
+              "style": {
+                "classes": "Popups/core"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "CH8"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH8\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH08"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH9"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH9\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH09"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH10"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH10\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH10"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH11"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH11\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH11"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH12"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH12\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH12"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH13"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH13\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH13"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH14"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH14\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH14"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH15"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "position.display": {
+                        "binding": {
+                          "config": {
+                            "path": "view.custom.InputDataType"
+                          },
+                          "type": "property"
+                        }
+                      },
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH15\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH15"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Page2"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.pageNr"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d1",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "CH0"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH0\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH00"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH1"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH1\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH01"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH2"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH2\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH02"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH3"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH3\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH03"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH4"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH4\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH04"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH5"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH5\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH05"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH6"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH6\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH06"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "CH7"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Ch_Data": {
+                        "binding": {
+                          "config": {
+                            "expression": "{view.params.Module_Tag} +\"/I/CH7\""
+                          },
+                          "type": "expr"
+                        }
+                      },
+                      "props.params.Mod_Fault": {
+                        "binding": {
+                          "config": {
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Fault"
+                          },
+                          "transforms": [
+                            {
+                              "expression": "{value}\u003d-1",
+                              "type": "expression"
+                            }
+                          ],
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": "CH07"
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/AI_Ch_IFX",
+                      "style": {
+                        "overflow": "hidden"
+                      },
+                      "useDefaultViewHeight": true,
+                      "useDefaultViewWidth": true
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Page1"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.pageNr"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d0",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Fct_Home"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": ".../Nav_Menu.props.params.HomeSelect"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "toBoolean({value})",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "alignItems": "center",
+              "direction": "column",
+              "style": {
+                "borderColor": "#AAAAAA",
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "classes": "Popups/core",
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "lbl_header"
+                    },
+                    "position": {
+                      "basis": "50px",
+                      "grow": 1
+                    },
+                    "props": {
+                      "text": "Revision Info"
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Fct_Header"
+                },
+                "position": {
+                  "basis": "40px"
+                },
+                "props": {
+                  "style": {
+                    "fontWeight": "bold"
+                  }
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "lbl_FcpID"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "props": {
+                      "text": "Faceplate ID:"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "lbl_ID"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "props": {
+                      "text": "1756-IF16"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "lbl_FcpRev"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "props": {
+                      "text": "Revision:"
+                    },
+                    "type": "ia.display.label"
+                  },
+                  {
+                    "meta": {
+                      "name": "lbl_Rev"
+                    },
+                    "position": {
+                      "basis": "30px"
+                    },
+                    "props": {
+                      "text": "1.0.00"
+                    },
+                    "type": "ia.display.label"
+                  }
+                ],
+                "meta": {
+                  "name": "Fct_Core"
+                },
+                "position": {
+                  "basis": "40px",
+                  "grow": 1
+                },
+                "props": {
+                  "direction": "column",
+                  "style": {
+                    "classes": "Popups/core"
+                  }
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Fct_Revision"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": ".../Nav_Menu.props.params.HelpSelect"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "toBoolean({value})",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderColor": "#AAAAAA",
+                "borderStyle": "solid",
+                "borderWidth": 1
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Ch0"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 0
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch1"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 1
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch2"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 2
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch3"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 3
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch4"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 4
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch5"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 5
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch6"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 6
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch7"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 7
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Page1"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.pageNr"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d0",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              },
+              {
+                "children": [
+                  {
+                    "meta": {
+                      "name": "Ch8"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 8
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch9"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 9
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch10"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 10
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch11"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 11
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch12"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 12
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch13"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 13
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch14"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 14
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  },
+                  {
+                    "meta": {
+                      "name": "Ch15"
+                    },
+                    "position": {
+                      "basis": "37px"
+                    },
+                    "propConfig": {
+                      "props.params.Desc": {
+                        "binding": {
+                          "config": {
+                            "bidirectional": true,
+                            "fallbackDelay": 0,
+                            "mode": "indirect",
+                            "references": {
+                              "Channel": "{this.props.params.Ch_Nr}",
+                              "Module_Tag": "{view.params.Module_Tag}"
+                            },
+                            "tagPath": "{Module_Tag}/I/Ch{Channel}/Desc"
+                          },
+                          "type": "tag"
+                        }
+                      }
+                    },
+                    "props": {
+                      "params": {
+                        "Ch_Nr": 15
+                      },
+                      "path": "IODeviceLibrary/Popups/1756/Embedded Views/Desc_Ch"
+                    },
+                    "type": "ia.display.view"
+                  }
+                ],
+                "meta": {
+                  "name": "Page2"
+                },
+                "position": {
+                  "basis": "200px",
+                  "grow": 1
+                },
+                "propConfig": {
+                  "position.display": {
+                    "binding": {
+                      "config": {
+                        "path": "view.custom.pageNr"
+                      },
+                      "transforms": [
+                        {
+                          "expression": "{value}\u003d1",
+                          "type": "expression"
+                        }
+                      ],
+                      "type": "property"
+                    }
+                  }
+                },
+                "props": {
+                  "direction": "column"
+                },
+                "type": "ia.container.flex"
+              }
+            ],
+            "meta": {
+              "name": "Fct_Edit"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": ".../Nav_Menu.props.params.EditSelected"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "toBoolean({value})",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderColor": "#AAAAAA",
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "classes": "Popups/core"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "children": [
+              {
+                "meta": {
+                  "name": "ToggleSwitch"
+                },
+                "position": {
+                  "basis": "36px"
+                },
+                "propConfig": {
+                  "props.selected": {
+                    "binding": {
+                      "config": {
+                        "bidirectional": true,
+                        "fallbackDelay": 2.5,
+                        "mode": "indirect",
+                        "references": {
+                          "Module_Tag": "{view.params.Module_Tag}"
+                        },
+                        "tagPath": "{Module_Tag}/Parameters.InputDataType"
+                      },
+                      "type": "tag"
+                    }
+                  }
+                },
+                "props": {
+                  "label": {
+                    "position": "left",
+                    "text": "Off \u003d Differential Data, On \u003d Single Ended"
+                  }
+                },
+                "type": "ia.input.toggle-switch"
+              }
+            ],
+            "meta": {
+              "name": "Fct_Config"
+            },
+            "position": {
+              "basis": "200px",
+              "grow": 1
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "path": ".../Nav_Menu.props.params.ConfigSelect"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "toBoolean({value})",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "direction": "column",
+              "style": {
+                "borderColor": "#AAAAAA",
+                "borderStyle": "solid",
+                "borderWidth": 1,
+                "classes": "Popups/core",
+                "overflow": "hidden"
+              }
+            },
+            "type": "ia.container.flex"
+          },
+          {
+            "meta": {
+              "name": "Msb_Paging"
+            },
+            "position": {
+              "basis": "30px"
+            },
+            "propConfig": {
+              "position.display": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "edit": "{.../Nav_Menu.props.params.EditSelected}",
+                      "home": "{.../Nav_Menu.props.params.HomeSelect}",
+                      "inputData": "{view.custom.InputDataType}"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "expression": "({value}[\u0027home\u0027] || {value}[\u0027edit\u0027]) \u0026\u0026 {value}[\u0027inputData\u0027]",
+                      "type": "expression"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              },
+              "props.controlValue": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.pageNr"
+                  },
+                  "type": "property"
+                }
+              },
+              "props.indicatorValue": {
+                "binding": {
+                  "config": {
+                    "bidirectional": true,
+                    "path": "view.custom.pageNr"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "orientation": "row",
+              "states": [
+                {
+                  "selectedStyle": {
+                    "backgroundColor": "",
+                    "classes": ""
+                  },
+                  "text": "Page 1",
+                  "unselectedStyle": {
+                    "backgroundColor": "#D5D5D5",
+                    "classes": ""
+                  },
+                  "value": 0
+                },
+                {
+                  "selectedStyle": {
+                    "backgroundColor": "",
+                    "classes": ""
+                  },
+                  "text": "Page 2",
+                  "unselectedStyle": {
+                    "backgroundColor": "#D5D5D5",
+                    "classes": ""
+                  },
+                  "value": 1
+                }
+              ],
+              "style": {
+                "margin": "2px"
+              }
+            },
+            "type": "ia.input.multi-state-button"
+          }
+        ],
+        "meta": {
+          "name": "Fct_Core"
+        },
+        "position": {
+          "basis": "250px",
+          "grow": 1
+        },
+        "props": {
+          "direction": "column"
+        },
+        "type": "ia.container.flex"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "style": {
+        "classes": "Popups/background"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

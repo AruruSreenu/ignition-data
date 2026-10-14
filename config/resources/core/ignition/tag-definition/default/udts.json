@@ -1,0 +1,13 @@
+[
+  {
+    "name": "Machine 1",
+    "parameters": {
+      "machineNumber": {
+        "dataType": "Integer",
+        "value": 2
+      }
+    },
+    "tagType": "UdtInstance",
+    "typeId": "Machine"
+  }
+]

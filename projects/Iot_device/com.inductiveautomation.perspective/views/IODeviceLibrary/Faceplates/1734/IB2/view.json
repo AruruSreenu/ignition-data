@@ -1,0 +1,148 @@
+{
+  "custom": {
+    "popupTitle": "LABEL (1734-IB2)"
+  },
+  "params": {
+    "Label": "Label",
+    "Tag": "value"
+  },
+  "propConfig": {
+    "custom.popupTitle": {
+      "binding": {
+        "config": {
+          "path": "view.params.Label"
+        },
+        "transforms": [
+          {
+            "expression": "concat(upper({value}),\" (1734-IB2)\")",
+            "type": "expression"
+          }
+        ],
+        "type": "property"
+      },
+      "persistent": true
+    },
+    "params.Label": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Tag": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 470,
+      "width": 40
+    },
+    "dropConfig": {
+      "udts": [
+        {
+          "action": "path",
+          "param": "Tag",
+          "type": "IODeviceLibrary/1734/1734-IB2"
+        }
+      ]
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "lbl_Tag"
+            },
+            "position": {
+              "height": 20.25,
+              "rotate": {
+                "angle": "-90deg"
+              },
+              "width": 100,
+              "x": -29.875,
+              "y": 39.875
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Label"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "classes": "Faceplates/label"
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "cct_Header"
+        },
+        "position": {
+          "basis": "100px"
+        },
+        "props": {
+          "style": {
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.coord"
+      },
+      {
+        "meta": {
+          "name": "1734-IB2"
+        },
+        "position": {
+          "basis": "100px",
+          "grow": 1
+        },
+        "props": {
+          "fit": {
+            "mode": "fill"
+          },
+          "source": "data:image/png;base64,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"
+        },
+        "type": "ia.display.image"
+      }
+    ],
+    "events": {
+      "dom": {
+        "onClick": {
+          "config": {
+            "draggable": true,
+            "id": "{view.params.Tag}",
+            "modal": false,
+            "overlayDismiss": true,
+            "resizable": false,
+            "showCloseIcon": true,
+            "title": "{view.custom.popupTitle}",
+            "type": "open",
+            "viewParams": {
+              "Module_Tag": "{view.params.Tag}"
+            },
+            "viewPath": "IODeviceLibrary/Popups/1734/IB2",
+            "viewportBound": false
+          },
+          "scope": "C",
+          "type": "popup"
+        }
+      }
+    },
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "custom": {
+    "providers": [
+      "default"
+    ]
+  },
+  "params": {},
+  "propConfig": {
+    "custom.providers": {
+      "binding": {
+        "config": {
+          "expression": "runScript(\u0027exchange.gatewayDeviceMonitor.findGatewayDevices.getProvidersWithDevices()\u0027,60000)"
+        },
+        "type": "expr"
+      },
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 1080,
+      "width": 1920
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "GatewayListFlexRepeater"
+        },
+        "position": {
+          "basis": "320px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.instances": {
+            "binding": {
+              "config": {
+                "path": "view.custom.providers"
+              },
+              "transforms": [
+                {
+                  "code": "\n\t\"\"\"\n\tBuilds one Flex Repeater instance for each provider in:\n\t\n\t\tview.custom.providers\n\n\t\"\"\"\n\n\tinstances \u003d []\n\n\tif value is None:\n\t\treturn instances\n\n\ttry:\n\t\tfor provider in value:\n\t\t\tinstances.append({\n\t\t\t\t\"provider\": str(provider)\n\t\t\t})\n\n\texcept Exception as e:\n\t\tsystem.util.getLogger(\"exchange.gatewayDeviceMonitor.ProviderFlexRepeater\").error(\n\t\t\t\"Failed building provider instances: %s\" % e\n\t\t)\n\n\treturn instances",
+                  "type": "script"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "justify": "space-evenly",
+          "path": "Exchange/Gateway Device Connection Monitor/Device List",
+          "wrap": "wrap"
+        },
+        "type": "ia.display.flex-repeater"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "justify": "space-evenly"
+    },
+    "type": "ia.container.flex"
+  }
+}

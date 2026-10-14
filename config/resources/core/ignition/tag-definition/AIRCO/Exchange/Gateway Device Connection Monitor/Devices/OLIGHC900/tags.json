@@ -1,0 +1,29 @@
+[
+  {
+    "dataType": "Boolean",
+    "name": "Connected",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Connected",
+    "opcServer": "Ignition OPC UA Server",
+    "tagGroup": "Default",
+    "tagType": "AtomicTag",
+    "valueSource": "opc"
+  },
+  {
+    "dataType": "String",
+    "name": "Hostname",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Hostname",
+    "opcServer": "Ignition OPC UA Server",
+    "tagGroup": "Default",
+    "tagType": "AtomicTag",
+    "valueSource": "opc"
+  },
+  {
+    "dataType": "String",
+    "name": "Name",
+    "opcItemPath": "ns\u003d1;s\u003d[OLIGHC900][Diagnostics]/Name",
+    "opcServer": "Ignition OPC UA Server",
+    "tagGroup": "Default",
+    "tagType": "AtomicTag",
+    "valueSource": "opc"
+  }
+]

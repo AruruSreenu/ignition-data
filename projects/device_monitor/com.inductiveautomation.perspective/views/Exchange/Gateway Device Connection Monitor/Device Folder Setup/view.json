@@ -1,0 +1,145 @@
+{
+  "custom": {},
+  "params": {},
+  "props": {
+    "defaultSize": {
+      "height": 190,
+      "width": 996
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "Spacer_3"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\texchange.gatewayDeviceMonitor.findGatewayDevices.buildDeviceDiagnosticTagsAllProviders() \n\t"
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "AllProvidersButton"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "text": "Click Here -- Create Device Folder for Current Gateway in ALL Tag Providers"
+        },
+        "type": "ia.input.button"
+      },
+      {
+        "meta": {
+          "name": "Spacer"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "children": [
+          {
+            "events": {
+              "dom": {
+                "onClick": {
+                  "config": {
+                    "script": "\tprovider \u003d self.getSibling(\"TagProviderDropdown\").props.value\n\texchange.gatewayDeviceMonitor.findGatewayDevices.buildDeviceDiagnosticTagsSpecific(provider)\n\t"
+                  },
+                  "scope": "G",
+                  "type": "script"
+                }
+              }
+            },
+            "meta": {
+              "name": "SpecificProviderButton"
+            },
+            "position": {
+              "basis": "34px",
+              "grow": 1
+            },
+            "props": {
+              "text": "Click Here -- Create Device Folder for Current Gateway in SPECIFIC Tag Provider from Selection ----\u003e"
+            },
+            "type": "ia.input.button"
+          },
+          {
+            "meta": {
+              "name": "TagProviderDropdown"
+            },
+            "position": {
+              "basis": "256px"
+            },
+            "propConfig": {
+              "props.options": {
+                "binding": {
+                  "config": {
+                    "struct": {
+                      "providerCheck": "now(10000)"
+                    },
+                    "waitOnAll": true
+                  },
+                  "transforms": [
+                    {
+                      "code": "\tproviderNames \u003d exchange.gatewayDeviceMonitor.findGatewayDevices.getProviders()\n\n\treturn [\n    \t{\"label\": p, \"value\": p}\n    \tfor p in providerNames\n\t]\n\t\t",
+                      "type": "script"
+                    }
+                  ],
+                  "type": "expr-struct"
+                }
+              }
+            },
+            "props": {
+              "placeholder": {
+                "text": "Select Tag Provider..."
+              },
+              "search": {
+                "enabled": false
+              }
+            },
+            "type": "ia.input.dropdown"
+          }
+        ],
+        "meta": {
+          "name": "ProviderSpecific"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "props": {
+          "justify": "center"
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "Spacer_2"
+        },
+        "position": {
+          "basis": "30px"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column"
+    },
+    "type": "ia.container.flex"
+  }
+}

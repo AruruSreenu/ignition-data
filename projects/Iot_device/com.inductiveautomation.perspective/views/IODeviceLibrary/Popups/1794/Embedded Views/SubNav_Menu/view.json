@@ -1,0 +1,151 @@
+{
+  "custom": {},
+  "params": {
+    "Part1": true,
+    "Part2": false
+  },
+  "propConfig": {
+    "params.Part1": {
+      "paramDirection": "inout",
+      "persistent": true
+    },
+    "params.Part2": {
+      "paramDirection": "inout",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 300,
+      "width": 50
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "lbl_Separator"
+        },
+        "position": {
+          "basis": "32px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.params.Part1 \u003d \"true\"\n\tself.view.params.Part2 \u003d \"false\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "icn_Part1"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "propConfig": {
+          "props.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Part1"
+              },
+              "transforms": [
+                {
+                  "expression": "toBoolean({value})",
+                  "type": "expression"
+                },
+                {
+                  "fallback": "#3D3D3D",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#919191"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "material/looks_one"
+        },
+        "type": "ia.display.icon"
+      },
+      {
+        "events": {
+          "dom": {
+            "onClick": {
+              "config": {
+                "script": "\tself.view.params.Part1 \u003d \"false\"\n\tself.view.params.Part2 \u003d \"true\""
+              },
+              "scope": "G",
+              "type": "script"
+            }
+          }
+        },
+        "meta": {
+          "name": "icn_Part2"
+        },
+        "position": {
+          "basis": "50px"
+        },
+        "propConfig": {
+          "props.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Part2"
+              },
+              "transforms": [
+                {
+                  "expression": "toBoolean({value})",
+                  "type": "expression"
+                },
+                {
+                  "fallback": "#3D3D3D",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#919191"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "path": "material/looks_two"
+        },
+        "type": "ia.display.icon"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "direction": "column",
+      "style": {
+        "classes": "Popups/core",
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

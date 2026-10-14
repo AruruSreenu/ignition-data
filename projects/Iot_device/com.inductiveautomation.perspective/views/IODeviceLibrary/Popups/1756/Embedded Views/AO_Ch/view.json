@@ -1,0 +1,344 @@
+{
+  "custom": {},
+  "params": {
+    "Ch_Data": "[default]IODeviceLibrary/1756/OF4/O/Ch0Data",
+    "Ch_Desc": "[default]IODeviceLibrary/1756/OF4/Desc/0",
+    "Ch_Nr": "CH00",
+    "HighAl": false,
+    "LowAl": false,
+    "Mod_Fault": false
+  },
+  "propConfig": {
+    "params.Ch_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ch_Desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ch_Nr": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.HighAl": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.LowAl": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Mod_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 37,
+      "width": 550
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "meta": {
+          "name": "lbl_Ch"
+        },
+        "position": {
+          "basis": "40px"
+        },
+        "propConfig": {
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Mod_Fault"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#FFFFFF"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Ch_Nr"
+              },
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginRight": 5,
+            "textAlign": "right"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_Value"
+        },
+        "position": {
+          "basis": "80px"
+        },
+        "propConfig": {
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Mod_Fault"
+              },
+              "transforms": [
+                {
+                  "fallback": "#475CA7",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#FFFFFF"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 0,
+                "mode": "indirect",
+                "references": {
+                  "Ch_Data": "{view.params.Ch_Data}"
+                },
+                "tagPath": "{Ch_Data}"
+              },
+              "transforms": [
+                {
+                  "formatType": "numeric",
+                  "formatValue": "###0.##",
+                  "type": "format"
+                }
+              ],
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "marginRight": 5,
+            "textAlign": "center"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_Desc"
+        },
+        "position": {
+          "basis": "10px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Mod_Fault"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#FFFFFF"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          },
+          "props.text": {
+            "binding": {
+              "config": {
+                "fallbackDelay": 2.5,
+                "mode": "indirect",
+                "references": {
+                  "Ch_Desc": "{view.params.Ch_Desc}"
+                },
+                "tagPath": "{Ch_Desc}"
+              },
+              "type": "tag"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginRight": 5,
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_LowAlarm"
+        },
+        "position": {
+          "basis": "10px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.LowAl"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Mod_Fault"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#FFFFFF"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "marginRight": 5,
+            "textAlign": "left"
+          },
+          "text": "LOW ALARM"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_HighAlarm"
+        },
+        "position": {
+          "basis": "10px",
+          "grow": 1,
+          "shrink": 0
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "path": "view.params.HighAl"
+              },
+              "type": "property"
+            }
+          },
+          "props.style.color": {
+            "binding": {
+              "config": {
+                "path": "view.params.Mod_Fault"
+              },
+              "transforms": [
+                {
+                  "fallback": "#000000",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": true,
+                      "output": "#FFFFFF"
+                    }
+                  ],
+                  "outputType": "color",
+                  "type": "map"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold",
+            "marginRight": 5,
+            "textAlign": "left"
+          },
+          "text": "HIGH ALARM"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "propConfig": {
+      "props.style.backgroundColor": {
+        "binding": {
+          "config": {
+            "path": "view.params.Mod_Fault"
+          },
+          "transforms": [
+            {
+              "fallback": "#FFFFFF00",
+              "inputType": "scalar",
+              "mappings": [
+                {
+                  "input": true,
+                  "output": "#000000"
+                }
+              ],
+              "outputType": "color",
+              "type": "map"
+            }
+          ],
+          "type": "property"
+        }
+      }
+    },
+    "props": {
+      "alignItems": "center",
+      "style": {
+        "overflow": "hidden"
+      }
+    },
+    "type": "ia.container.flex"
+  }
+}

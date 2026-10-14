@@ -1,0 +1,418 @@
+{
+  "custom": {},
+  "params": {
+    "Alarm_FB": false,
+    "Alarm_FLT": false,
+    "Alarm_FPL": false,
+    "Alarm_NL": false,
+    "Alarm_OVF": false,
+    "Alarm_OW": false,
+    "Ch_Data": true,
+    "Ch_Fault": true,
+    "Ch_Nr": 0,
+    "Desc": "Desciption",
+    "Mod_Fault": false
+  },
+  "propConfig": {
+    "params.Alarm_FB": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Alarm_FLT": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Alarm_FPL": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Alarm_NL": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Alarm_OVF": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Alarm_OW": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ch_Data": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ch_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Ch_Nr": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Desc": {
+      "paramDirection": "input",
+      "persistent": true
+    },
+    "params.Mod_Fault": {
+      "paramDirection": "input",
+      "persistent": true
+    }
+  },
+  "props": {
+    "defaultSize": {
+      "height": 37,
+      "width": 498
+    }
+  },
+  "root": {
+    "children": [
+      {
+        "children": [
+          {
+            "meta": {
+              "name": "lbl_Ch"
+            },
+            "position": {
+              "basis": "20px"
+            },
+            "propConfig": {
+              "props.text": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Ch_Nr"
+                  },
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "marginRight": 5,
+                "textAlign": "right"
+              }
+            },
+            "type": "ia.display.label"
+          },
+          {
+            "meta": {
+              "name": "lbl_Led"
+            },
+            "position": {
+              "basis": "25px"
+            },
+            "propConfig": {
+              "props.style.borderColor": {
+                "binding": {
+                  "config": {
+                    "path": "view.params.Ch_Data"
+                  },
+                  "transforms": [
+                    {
+                      "expression": "toBoolean({value})",
+                      "type": "expression"
+                    },
+                    {
+                      "fallback": "#FF00FF",
+                      "inputType": "scalar",
+                      "mappings": [
+                        {
+                          "input": false,
+                          "output": "#D1D3D4"
+                        },
+                        {
+                          "input": true,
+                          "output": "#475CA7"
+                        }
+                      ],
+                      "outputType": "color",
+                      "type": "map"
+                    }
+                  ],
+                  "type": "property"
+                }
+              }
+            },
+            "props": {
+              "style": {
+                "borderStyle": "solid",
+                "borderWidth": 5
+              }
+            },
+            "type": "ia.display.label"
+          }
+        ],
+        "meta": {
+          "name": "Fct_grp"
+        },
+        "position": {
+          "basis": "60px"
+        },
+        "propConfig": {
+          "props.style.borderStyle": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Ch_Fault} || {view.params.Mod_Fault}"
+              },
+              "transforms": [
+                {
+                  "fallback": "solid",
+                  "inputType": "scalar",
+                  "mappings": [
+                    {
+                      "input": false,
+                      "output": "none"
+                    },
+                    {
+                      "input": true,
+                      "output": "solid"
+                    }
+                  ],
+                  "outputType": "scalar",
+                  "type": "map"
+                }
+              ],
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "alignItems": "center",
+          "style": {
+            "borderColor": "#FFF200",
+            "borderWidth": 2,
+            "marginLeft": 5,
+            "overflow": "hidden"
+          }
+        },
+        "type": "ia.container.flex"
+      },
+      {
+        "meta": {
+          "name": "lbl_Error"
+        },
+        "position": {
+          "basis": "10px"
+        },
+        "propConfig": {
+          "meta.visible": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Ch_Fault} || {view.params.Mod_Fault}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginRight": 5,
+            "textAlign": "center"
+          },
+          "text": "!"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_Desc"
+        },
+        "position": {
+          "basis": "10px",
+          "grow": 1
+        },
+        "propConfig": {
+          "props.text": {
+            "binding": {
+              "config": {
+                "path": "view.params.Desc"
+              },
+              "transforms": [
+                {
+                  "expression": "Replace({value},\u0027\"\u0027,\"\")",
+                  "type": "expression"
+                }
+              ],
+              "type": "property"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "marginRight": 5,
+            "textAlign": "left"
+          }
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_OW"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Alarm_OW} \u0026\u0026\r\n!{view.params.Alarm_FPL}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "",
+            "fontWeight": "bold"
+          },
+          "text": "OPEN WIRE"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_FPL"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Alarm_FPL}\u0026\u0026\r\n!{view.params.Alarm_OVF}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "fontWeight": "bold"
+          },
+          "text": "FIELD POWER LOSS"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_FLT"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Alarm_FLT} \u0026\u0026\r\n!{view.params.Alarm_FPL} \u0026\u0026\r\n!{view.params.Alarm_OW} \u0026\u0026\r\n!{view.params.Alarm_NL} \u0026\u0026\r\n!{view.params.Alarm_FB} \u0026\u0026\r\n!{view.params.Alarm_OVF}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "",
+            "fontWeight": "bold"
+          },
+          "text": "FAULT"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_NL"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Alarm_NL} \u0026\u0026\r\n!{view.params.Alarm_FB} \u0026\u0026\r\n!{view.params.Alarm_FPL} \u0026\u0026\r\n!{view.params.Alarm_OVF}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "",
+            "fontWeight": "bold"
+          },
+          "text": "NO LOAD"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_FB"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Alarm_FB} \u0026\u0026\r\n!{view.params.Alarm_FPL} \u0026\u0026\r\n!{view.params.Alarm_OVF}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "",
+            "fontWeight": "bold"
+          },
+          "text": "FUSE BLOWN"
+        },
+        "type": "ia.display.label"
+      },
+      {
+        "meta": {
+          "name": "lbl_OVF"
+        },
+        "position": {
+          "basis": "50px",
+          "grow": 1
+        },
+        "propConfig": {
+          "position.display": {
+            "binding": {
+              "config": {
+                "expression": "{view.params.Alarm_OVF}"
+              },
+              "type": "expr"
+            }
+          }
+        },
+        "props": {
+          "style": {
+            "color": "",
+            "fontWeight": "bold"
+          },
+          "text": "OUTPUT VERIFY FAULT"
+        },
+        "type": "ia.display.label"
+      }
+    ],
+    "meta": {
+      "name": "root"
+    },
+    "props": {
+      "alignItems": "center"
+    },
+    "type": "ia.container.flex"
+  }
+}

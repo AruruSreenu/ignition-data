@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Machine",
+    "parameters": {
+      "machineNumber": {
+        "dataType": "Integer",
+        "value": 0
+      }
+    },
+    "tagType": "UdtType",
+    "typeId": null,
+    "tags": [
+      {
+        "dataType": "String",
+        "name": "Amps",
+        "tagType": "AtomicTag",
+        "value": {
+          "bindType": "parameter",
+          "binding": "Amps {machineNumber}"
+        },
+        "valueSource": "memory"
+      },
+      {
+        "dataType": "String",
+        "name": "HOA",
+        "tagType": "AtomicTag",
+        "value": {
+          "bindType": "parameter",
+          "binding": "HOA {machineNumber}"
+        },
+        "valueSource": "memory"
+      }
+    ]
+  }
+]
